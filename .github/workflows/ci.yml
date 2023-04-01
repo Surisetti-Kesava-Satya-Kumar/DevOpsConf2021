@@ -1,5 +1,6 @@
 name: CI-NoAction
 on:
+  workflow_dispatch:
   workflow_call:
     inputs:
       path:
