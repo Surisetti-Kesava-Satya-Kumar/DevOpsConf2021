@@ -26,4 +26,4 @@ jobs:
       - name: Call the PS script and publish PBI contents
         shell: powershell
         run: |
-          . GitHub/run-task.ps1 -ClientId cloud_user_p_6084de04@realhandsonlabs.com -Secret AhkTqgG9ttlLsBW8%5NB -TenantId 84f1e4ea-8554-43e1-8709-f0b8589ea118 -FilePattern ${{ inputs.path }} -WorkspaceName ${{ inputs.workspacename }} -Action 'Publish' -Create $true -Overwrite $true
+          . GitHub/run-task.ps1 -ClientId ${{ secrets.clientid }} -Secret ${{ secrets.secret }} -TenantId ${{ secrets.tenantid }} -FilePattern ${{ inputs.path }} -WorkspaceName ${{ inputs.workspacename }} -Action 'Publish' -Create $true -Overwrite $true
