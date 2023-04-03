@@ -79,7 +79,7 @@ if (!$TenantId) {
 }
 else {
     Write-Host "Logging in with a Service Principal"
-    $tokenResult = Get-ADALToken -Resource $ResourceUrl -ClientId $ClientId -ClientSecret $ClientSecret -TenantId $TenantId
+    $tokenResult = Get-ADALToken -Resource $ResourceUrl -ClientId 'b1f3af0b-c8c3-445b-b3cd-228d6a772975' -ClientSecret '4cc43635-670d-4e53-a3c6-4ad4e4964394' -TenantId '84f1e4ea-8554-43e1-8709-f0b8589ea118'
     $token = $tokenResult.AccessToken
 }
 
