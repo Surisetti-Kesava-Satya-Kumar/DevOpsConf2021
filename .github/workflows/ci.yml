@@ -8,14 +8,20 @@ on:
         type: string
       workspacename:
         required: true
+        default: 'satya-epams'
         type: string
     secrets:
-      clientid:
-        required: true
-      secret:
-        required: true
-      tenantid:
-        required: true
+      clientid: ${{ secrets.CLIENTID }}
+      secret: ${{ secrets.CLIENTSECRET }}
+      tenantid: ${{ secrets.TENANTID }}
+#       clientid:
+#         required: true
+#         default: 'cloud_user_p_88fce13f@realhandsonlabs.com'
+#       secret:
+#         required: true
+#         default: 'AY*EMtSuOLtuDcouAI77'
+#       tenantid:
+#         required: true
 
 jobs:
   build:
